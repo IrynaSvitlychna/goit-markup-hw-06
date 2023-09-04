@@ -341,8 +341,10 @@ section {
   margin: -1px;
 }
 
-.feature-item:not(:last-child) {
-  margin-bottom: 72px;
+@media screen and (max-width: 768px) {
+  .feature-item:not(:last-child) {
+    margin-bottom: 72px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -413,7 +415,6 @@ section {
 }
 
 .feature-text {
-  font-family: inherit;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
@@ -472,7 +473,8 @@ section {
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .team > .container,
-  .customers > .container {
+  .customers > .container,
+  .foot > .container {
     max-width: 584px;
   }
 }
@@ -646,6 +648,13 @@ section {
   gap: 72px 24px;
 }
 
+@media screen and (max-width: 768px) {
+  .foot-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .foot-logo-container {
   margin-right: 120px;
 }
@@ -677,7 +686,6 @@ section {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--WHITE);
-  width: 264px;
   font-size: 16px;
 }
 
@@ -694,11 +702,18 @@ section {
 
 .foot-form {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
+  flex-direction: column;
+  gap: 16px;
 }
 
+@media screen and (min-width: 1157px) {
+  .foot-form {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+}
 .foot-form-input {
   width: 264px;
   height: 40px;
@@ -1165,7 +1180,6 @@ input[type="checkbox"]:checked + .modal-form-agrement .checkbox-agrement {
   width: 24px;
   height: 24px;
   stroke-width: 1px;
- 
 } */
 
 .mobile-menu {
@@ -1192,12 +1206,53 @@ input[type="checkbox"]:checked + .modal-form-agrement .checkbox-agrement {
   color: var(--OCEAN);
 }
 
-.mobile-menu-social {
+.list-item-cont-mobile:hover,
+.list-item-cont-mobile:focus {
+  color: var(--iris);
+}
+
+@media screen and (max-width: 768px) {
+  .social-icon {
+    justify-content: space-between;
+  }
+}
+
+.addr-list-mobile {
+  margin-bottom: 48px;
   display: flex;
+  flex-direction: column;
 }
+
+@media screen and (max-width: 768px) {
+  .addr-list-item- {
+    gap: 40px;
+  }
+}
+.mobile-menu-social {
+}
+
+.addr-list-item-mobile:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.list-item-cont-mobile {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+/* .mobile-menu-social {
+  display: flex;
+} */
 /* @media screen and (min-width: 768px) {
-   
+   .addr-list-item {
+    gap: 40px;
+   }
 }
+
+
+
 
 @media screen and (min-width: 1440px) {
   
