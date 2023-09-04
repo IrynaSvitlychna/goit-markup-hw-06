@@ -129,6 +129,12 @@ section {
 
 @media screen and (min-width: 768px) {
   .nav-logo {
+    margin-right: 120px;
+  }
+}
+
+@media screen and (min-width: 1157px) {
+  .nav-logo {
     margin-right: 76px;
   }
 }
@@ -192,7 +198,6 @@ section {
 }
 
 .addr {
-  font-style: normal;
 }
 
 .addr-list {
@@ -206,11 +211,19 @@ section {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1157px) {
+@media screen and (min-width: 768px) {
+  .addr-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+/* @media screen and (min-width: 768px) and (max-width: 1157px) {
   .addr-list {
     display: none;
   }
-}
+} */
 
 .addr-list-item {
 }
@@ -646,6 +659,7 @@ section {
 .foot {
   background-color: var(--Navyblue);
   padding: 100px 0;
+  width: 100%;
 }
 
 .foot-container {
@@ -654,9 +668,10 @@ section {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  /* outline: 2px solid red;
-  outline-offset: -2px; */
   align-items: baseline;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
 }
 
 .foot-logo-container {
@@ -1194,16 +1209,6 @@ input[type="checkbox"]:checked + .modal-form-agrement .checkbox-agrement {
   text-transform: capitalize;
 }
 
-.mobile-menu-link:hover,
-.mobile-menu-link:focus {
-  color: var(--OCEAN);
-}
-
-.list-item-cont-mobile:hover,
-.list-item-cont-mobile:focus {
-  color: var(--iris);
-}
-
 @media screen and (max-width: 768px) {
   .social-icon {
     justify-content: space-between;
@@ -1222,6 +1227,8 @@ input[type="checkbox"]:checked + .modal-form-agrement .checkbox-agrement {
   }
 }
 .mobile-menu-social {
+  justify-content: flex-start;
+  gap: 56px;
 }
 
 .addr-list-item-mobile:not(:last-child) {
@@ -1233,6 +1240,17 @@ input[type="checkbox"]:checked + .modal-form-agrement .checkbox-agrement {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+}
+
+.mobile-link-studio {
+  color: var(--OCEAN);
+}
+
+.mobile-link-tel {
+  color: var(--iris);
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: capitalize;
 }
 
 /* .mobile-menu-social {
