@@ -67,9 +67,6 @@ section {
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
-
-  /* outline: 2px solid red;
-  outline-offset: -2px; */
 }
 
 /* Tablete creen */
@@ -218,12 +215,6 @@ section {
     gap: 12px;
   }
 }
-
-/* @media screen and (min-width: 768px) and (max-width: 1157px) {
-  .addr-list {
-    display: none;
-  }
-} */
 
 .addr-list-item {
 }
@@ -518,6 +509,7 @@ section {
 .team-item {
   width: 264px;
   margin: 0 auto;
+
   background-color: var(--WHITE);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
@@ -591,7 +583,7 @@ section {
   padding: 96px 0;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1158px) {
   .customers {
     padding: 120px 0;
   }
@@ -663,27 +655,22 @@ section {
 }
 
 .foot-container {
-  display: flex;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
   align-items: baseline;
-
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 
-.foot-logo-container {
-  margin-right: 120px;
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 72px;
 }
 
 .foot-logo-text {
   margin-top: 18px;
-}
-
-.foot-set-social {
-  margin-right: 80px;
 }
 
 .foot-link {
@@ -705,7 +692,7 @@ section {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--WHITE);
-  width: 264px;
+  width: 268px;
   font-size: 16px;
 }
 
@@ -722,6 +709,7 @@ section {
 
 .foot-form {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 24px;
@@ -742,7 +730,52 @@ section {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.foot-form-input:focus {
+.foot-lb-form {
+}
+
+@media screen and (max-width: 767px) {
+  .form-input,
+  .foot-input,
+  .foot-lb-form,
+  .foot-form {
+    width: 100%;
+  }
+
+  .text-foot,
+  .logo.link-foot {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    justify-content: flex-start;
+    gap: 72px 24px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .foot-input {
+    margin-right: auto;
+  }
+  .foot-logo-container {
+    margin-right: 120px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .footer-container {
+    gap: 0;
+  }
+}
+.foot-text .foot-form-input:focus {
+}
+
+.foot-input {
+}
+
+.foot-form-input {
 }
 
 .foot-form-input::placeholder {
@@ -763,10 +796,8 @@ section {
 .icon-btn {
   fill: var(--WHITE);
   margin-left: 16px;
-  /* display: inline-flex;
-  justify-content: center;
-  align-items: center; */
 }
+
 /* Portfolio page */
 .pf-section {
   padding-top: 96px;
@@ -1123,20 +1154,23 @@ input[type="checkbox"]:checked + .modal-form-agrement .checkbox-agrement {
   outline: none;
 }
 
-.btn {
+.butn {
   position: absolute;
   top: 24px;
   right: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--cornflower);
   width: 24px;
   height: 24px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--cornflower);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn:hover,
@@ -1252,16 +1286,3 @@ input[type="checkbox"]:checked + .modal-form-agrement .checkbox-agrement {
   font-weight: 700;
   text-transform: capitalize;
 }
-
-/* .mobile-menu-social {
-  display: flex;
-} */
-/* @media screen and (min-width: 768px) {
-   .addr-list-item {
-    gap: 40px;
-   }
-}
-
-@media screen and (min-width: 1440px) {
-  
-} */
