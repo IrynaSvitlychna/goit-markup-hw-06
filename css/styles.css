@@ -302,7 +302,7 @@ section {
 }
 
 .hero-title {
-  min-width: 288px;
+  max-width: 220px;
   margin-bottom: 72px;
   color: var(--WHITE);
   text-align: center;
@@ -1123,7 +1123,8 @@ section {
   margin-bottom: 24px;
 }
 .modal-form-agrement {
-  display: block;
+  display: flex;
+  align-items: center;
   color: var(--LIGHTSLATE);
   font-size: 12px;
   line-height: 1.17;
@@ -1157,6 +1158,7 @@ section {
   height: 16px;
   width: 16px;
   margin-right: 8px;
+  flex-shrink: 0;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   fill: transparent;
